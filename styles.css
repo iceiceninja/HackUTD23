@@ -1,0 +1,86 @@
+#body{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    column-gap: 10px;
+    /* align-items: center; */
+
+}
+button{
+    border: 5px solid black;
+    width: 5rem;
+    height: 3rem;
+}
+h1{
+    background-color: bisque;
+    margin: 10px;
+
+}
+header{
+    margin: 0;
+    padding: 0 ;
+    background-color: black;
+    color: white;
+    /* font-size: 45px; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+body{
+    margin: 0;
+}
+.textbox{
+    margin: 20px;
+    justify-content: center;
+
+}
+#buttons{
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    align-self: center;
+}
+.subheader{
+    width: 50%;
+}
+.column{
+    /* flex-grow: 1; */
+    flex: 1;
+}
+.navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-size: 27px;
+    padding-bottom: 5px;
+}
+.navbar li {
+    margin: 0 10px;
+    /* Add space between the items */
+}
+
+.navbar a {
+    text-decoration: none;
+    /* Remove underlines from links */
+    color: #fff;
+    /* Set link color */
+}
+
+/* Style for links on hover */
+.navbar a:hover {
+    text-decoration: underline;
+}
+#title{
+    font-size: 60px;
+}
+nav{
+    align-self: flex-end;
+}
