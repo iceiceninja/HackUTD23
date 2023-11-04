@@ -35,7 +35,38 @@
             </div>
         </div>
         <div class="column">
-            <div class="subheader">
+            <h1>Loan Application Form</h1>
+            <form id="loanApplicationForm">
+                <label for="GrossMonthlyIncome">Gross Monthly Income:</label>
+                <input type="text" id="GrossMonthlyIncome" name="GrossMonthlyIncome"><br>
+            
+                <label for="CreditCardPayment">Credit Card Payment:</label>
+                <input type="text" id="CreditCardPayment" name="CreditCardPayment"><br>
+            
+                <label for="CarPayment">Car Payment:</label>
+                <input type="text" id="CarPayment" name="CarPayment"><br>
+            
+                <label for="StudentLoanPayments">Student Loan Payments:</label>
+                <input type="text" id="StudentLoanPayments" name="StudentLoanPayments"><br>
+            
+                <label for="AppraisedValue">Appraised Value:</label>
+                <input type="text" id="AppraisedValue" name="AppraisedValue"><br>
+            
+                <label for="DownPayment">Down Payment:</label>
+                <input type="text" id="DownPayment" name="DownPayment"><br>
+            
+                <label for="LoanAmount">Loan Amount:</label>
+                <input type="text" id="LoanAmount" name="LoanAmount"><br>
+            
+                <label for="MonthlyMortgagePayment">Monthly Mortgage Payment:</label>
+                <input type="text" id="MonthlyMortgagePayment" name="MonthlyMortgagePayment"><br>
+            
+                <label for="CreditScore">Credit Score:</label>
+                <input type="text" id="CreditScore" name="CreditScore"><br>
+            
+                <input type="button" value="Submit" onclick="submitForm()">
+            </form>
+            <!-- <div class="subheader">
                 <h1>API Calls</h1>
             </div>
             <div class="textbox">
@@ -49,7 +80,7 @@
             </div>
             <div id="apiOutput">
                 hi
-            </div>
+            </div> -->
         </div>
     </div>
     <div id="body">
@@ -64,6 +95,7 @@
             </div>
         </div>
     </div>
+    
 </body>
 <script src="./index.js"></script>
 

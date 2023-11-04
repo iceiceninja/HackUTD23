@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
+from pydantic import BaseModel
 #   uvicorn main:app --reload
 
 app = FastAPI()
@@ -19,7 +19,7 @@ app.add_middleware(
     allow_origins=origins,
     allow_credentials=True,
     # You can specify specific HTTP methods (e.g., ["GET", "POST"])
-    allow_methods=["*"],
+    allow_methods=["GET", "POST"],
     allow_headers=["*"],  # You can specify specific headers
 )
 total = 0
@@ -34,3 +34,20 @@ async def hello():
     global total
     total += 1
     return {"message": str(total) + " hello"}
+
+class LoanApplication(BaseModel):
+    GrossMonthlyIncome: float
+    CreditCardPayment: float
+    CarPayment: float
+    StudentLoanPayments: float
+    AppraisedValue: float
+    DownPayment: float
+    LoanAmount: float
+    MonthlyMortgagePayment: float
+    CreditScore: int
+
+@app.post("/loan-application")
+async def submit_loan_application(data: LoanApplication):
+    # Process the data here, for example, save it to a database or perform calculations.
+    return {"message": "Loan application submitted successfully"}
+
