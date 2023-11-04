@@ -92,9 +92,11 @@
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorem eveniet perferendis adipisci
                     fugit
                     consectetur id. Nulla voluptates numquam neque sunt ut est tempore ullam?</p>
-                    <div id="fileupload">
-                        <input type="file" name="Analyze" id="Analyze">
-                    </div>   
+                    <form id="fileupload" enctype="multipart/form-data" onsubmit="return false;">
+                        <input type="file" id="Analyze" name="Analyze">
+                        <button type="button" onclick="uploadFile()">Upload File</button>
+                    </form>
+
             </div>
         </div>
     </div> 

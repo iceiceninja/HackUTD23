@@ -46,7 +46,7 @@ async function submitForm() {
         MonthlyMortgagePayment: document.getElementById('MonthlyMortgagePayment').value,
         CreditScore: document.getElementById('CreditScore').value
     };
-    await fetch("/loan-application", {
+    await fetch("http://127.0.0.1:8000/loan-application", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -63,4 +63,29 @@ async function submitForm() {
         });
     // You can now use the 'formData' object to perform actions, such as sending the data to a server via AJAX or processing it as needed.
     console.log(formData); // For demonstration, this logs the form data to the console.
+}
+function uploadFile() {
+    const fileInput = document.getElementById("Analyze");
+    const file = fileInput.files[0]; // Get the selected file
+
+    if (!file) {
+        alert("Please select a file to upload.");
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append("file", file); // Append the file to a FormData object
+
+    fetch("http://127.0.0.1:8000/upload", {
+        method: "POST",
+        body: formData,
+    })
+        .then(response => response.json())
+        .then(data => {
+            // Handle the response from the server as needed
+            console.log(data);
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
 }
