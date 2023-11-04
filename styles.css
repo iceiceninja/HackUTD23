@@ -24,12 +24,14 @@ h1{
 header{
     margin: 0;
     padding: 0 ;
+    padding-top: 10px;
     background-color: black;
     color: white;
     /* font-size: 45px; */
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
 
 }
 body{
@@ -60,7 +62,6 @@ body{
     margin: 0;
     display: flex;
     font-size: 27px;
-    padding-bottom: 5px;
 }
 .navbar li {
     margin: 0 10px;
@@ -76,11 +77,14 @@ body{
 
 /* Style for links on hover */
 .navbar a:hover {
-    text-decoration: underline;
+    background-color: aqua;
 }
 #title{
     font-size: 60px;
+    margin-bottom: 0px;
+    align-items: baseline;
 }
-nav{
-    align-self: flex-end;
+
+#fileupload{
+    
 }
